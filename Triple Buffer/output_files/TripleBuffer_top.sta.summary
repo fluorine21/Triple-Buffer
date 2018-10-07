@@ -1,0 +1,149 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'clk_in_raw'
+Slack : 3.556
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'mhz25'
+Slack : 5.262
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Setup 'pclk'
+Slack : 5.985
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk_in_raw'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'mhz25'
+Slack : 0.405
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'pclk'
+Slack : 0.440
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk_in_raw'
+Slack : 9.756
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'mhz25'
+Slack : 19.564
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'pclk'
+Slack : 19.593
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'vga_clk'
+Slack : 26.555
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'xclk'
+Slack : 26.555
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'cam_vsync'
+Slack : 96.000
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk_in_raw'
+Slack : 4.163
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'mhz25'
+Slack : 5.687
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'pclk'
+Slack : 6.532
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'mhz25'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk_in_raw'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'pclk'
+Slack : 0.387
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk_in_raw'
+Slack : 9.776
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'pclk'
+Slack : 19.657
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'mhz25'
+Slack : 19.694
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'vga_clk'
+Slack : 26.555
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'xclk'
+Slack : 26.555
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'cam_vsync'
+Slack : 96.000
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk_in_raw'
+Slack : 6.480
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'mhz25'
+Slack : 7.319
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'pclk'
+Slack : 7.769
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'mhz25'
+Slack : 0.168
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk_in_raw'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'pclk'
+Slack : 0.201
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk_in_raw'
+Slack : 9.437
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'pclk'
+Slack : 19.135
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'mhz25'
+Slack : 19.487
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'vga_clk'
+Slack : 29.543
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'xclk'
+Slack : 29.543
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'cam_vsync'
+Slack : 96.000
+TNS   : 0.000
+
+------------------------------------------------------------

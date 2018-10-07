@@ -1,0 +1,953 @@
+Partition Merge report for TripleBuffer_top
+Tue Oct 02 21:33:04 2018
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Partition Merge Summary
+  3. Partition Merge Netlist Types Used
+  4. Connections to In-System Debugging Instance "top_level_v_file"
+  5. Partition Merge Partition Statistics
+  6. Partition Merge Partition Pin Processing
+  7. Partition Merge Resource Usage Summary
+  8. Partition Merge RAM Summary
+  9. Partition Merge Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Partition Merge Summary                                                          ;
++------------------------------------+---------------------------------------------+
+; Partition Merge Status             ; Successful - Tue Oct 02 21:33:04 2018       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; TripleBuffer_top                            ;
+; Top-level Entity Name              ; TripleBuffer                                ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 1,528                                       ;
+;     Total combinational functions  ; 1,180                                       ;
+;     Dedicated logic registers      ; 1,025                                       ;
+; Total registers                    ; 1025                                        ;
+; Total pins                         ; 164                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 1,576,960                                   ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Netlist Types Used                                                                                            ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+; Partition Name                 ; Partition Type ; Netlist Type Used ; Netlist Type Requested ; Partition Contents             ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+; Top                            ; User-created   ; Source File       ; Source File            ;                                ;
+; sld_hub:auto_hub               ; Auto-generated ; Post-Synthesis    ; Post-Synthesis         ; sld_hub:auto_hub               ;
+; sld_signaltap:top_level_v_file ; Auto-generated ; Post-Synthesis    ; Post-Synthesis         ; sld_signaltap:top_level_v_file ;
+; hard_block:auto_generated_inst ; Auto-generated ; Source File       ; Source File            ; hard_block:auto_generated_inst ;
++--------------------------------+----------------+-------------------+------------------------+--------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Connections to In-System Debugging Instance "top_level_v_file"                                                                                                                         ;
++----------------------------------------------+---------------+-----------+--------------------------------+-------------------+----------------------------------------------+---------+
+; Name                                         ; Type          ; Status    ; Partition Name                 ; Netlist Type Used ; Actual Connection                            ; Details ;
++----------------------------------------------+---------------+-----------+--------------------------------+-------------------+----------------------------------------------+---------+
+; VGA_Vsync                                    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; VGA:vga|Vsync                                ; N/A     ;
+; VGA_Vsync                                    ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; VGA:vga|Vsync                                ; N/A     ;
+; camera_href                                  ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; camera_href                                  ; N/A     ;
+; camera_vsync                                 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; camera_vsync                                 ; N/A     ;
+; camera_vsync                                 ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; camera_vsync                                 ; N/A     ;
+; kHz_50:k50|clk_out                           ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; kHz_50:k50|clk_out                           ; N/A     ;
+; tri_control:tc|sram_select[0]                ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tri_control:tc|sram_select[0]                ; N/A     ;
+; tri_control:tc|sram_select[1]                ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tri_control:tc|sram_select[1]                ; N/A     ;
+; tri_control:tc|sram_select[2]                ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; tri_control:tc|sram_select[2]                ; N/A     ;
+; top_level_v_file|gnd                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~GND          ; N/A     ;
+; top_level_v_file|gnd                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~GND          ; N/A     ;
+; top_level_v_file|gnd                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~GND          ; N/A     ;
+; top_level_v_file|gnd                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~GND          ; N/A     ;
+; top_level_v_file|gnd                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~GND          ; N/A     ;
+; top_level_v_file|gnd                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~GND          ; N/A     ;
+; top_level_v_file|gnd                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~GND          ; N/A     ;
+; top_level_v_file|gnd                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~GND          ; N/A     ;
+; top_level_v_file|gnd                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~GND          ; N/A     ;
+; top_level_v_file|gnd                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~GND          ; N/A     ;
+; top_level_v_file|gnd                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~GND          ; N/A     ;
+; top_level_v_file|gnd                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~GND          ; N/A     ;
+; top_level_v_file|gnd                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~GND          ; N/A     ;
+; top_level_v_file|gnd                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~GND          ; N/A     ;
+; top_level_v_file|gnd                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~GND          ; N/A     ;
+; top_level_v_file|vcc                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~VCC          ; N/A     ;
+; top_level_v_file|vcc                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~VCC          ; N/A     ;
+; top_level_v_file|vcc                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~VCC          ; N/A     ;
+; top_level_v_file|vcc                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~VCC          ; N/A     ;
+; top_level_v_file|vcc                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~VCC          ; N/A     ;
+; top_level_v_file|vcc                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~VCC          ; N/A     ;
+; top_level_v_file|vcc                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~VCC          ; N/A     ;
+; top_level_v_file|vcc                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~VCC          ; N/A     ;
+; top_level_v_file|vcc                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~VCC          ; N/A     ;
+; top_level_v_file|vcc                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~VCC          ; N/A     ;
+; top_level_v_file|vcc                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~VCC          ; N/A     ;
+; top_level_v_file|vcc                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~VCC          ; N/A     ;
+; top_level_v_file|vcc                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~VCC          ; N/A     ;
+; top_level_v_file|vcc                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~VCC          ; N/A     ;
+; top_level_v_file|vcc                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~VCC          ; N/A     ;
+; top_level_v_file|vcc                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~VCC          ; N/A     ;
+; top_level_v_file|vcc                         ; post-fitting  ; connected ; sld_signaltap:top_level_v_file ; post-synthesis    ; sld_signaltap:top_level_v_file|~VCC          ; N/A     ;
+; tri_control:tc|cap_state.state_first_wait    ; post-fitting  ; connected ; Top                            ; post-synthesis    ; tri_control:tc|cap_state.state_first_wait    ; N/A     ;
+; tri_control:tc|cap_state.state_second_wait   ; post-fitting  ; connected ; Top                            ; post-synthesis    ; tri_control:tc|cap_state.state_second_wait   ; N/A     ;
+; tri_control:tc|cap_state.state_switch        ; post-fitting  ; connected ; Top                            ; post-synthesis    ; tri_control:tc|cap_state.state_switch        ; N/A     ;
+; tri_control:tc|trans_state.state_first_wait  ; post-fitting  ; connected ; Top                            ; post-synthesis    ; tri_control:tc|trans_state.state_first_wait  ; N/A     ;
+; tri_control:tc|trans_state.state_second_wait ; post-fitting  ; connected ; Top                            ; post-synthesis    ; tri_control:tc|trans_state.state_second_wait ; N/A     ;
+; tri_control:tc|trans_state.state_switch      ; post-fitting  ; connected ; Top                            ; post-synthesis    ; tri_control:tc|trans_state.state_switch      ; N/A     ;
++----------------------------------------------+---------------+-----------+--------------------------------+-------------------+----------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Partition Statistics                                                                                                    ;
++---------------------------------------------+------+------------------+--------------------------------+--------------------------------+
+; Statistic                                   ; Top  ; sld_hub:auto_hub ; sld_signaltap:top_level_v_file ; hard_block:auto_generated_inst ;
++---------------------------------------------+------+------------------+--------------------------------+--------------------------------+
+; Estimated Total logic elements              ; 506  ; 155              ; 867                            ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; Total combinational functions               ; 443  ; 128              ; 609                            ; 0                              ;
+; Logic element usage by number of LUT inputs ;      ;                  ;                                ;                                ;
+;     -- 4 input functions                    ; 174  ; 55               ; 309                            ; 0                              ;
+;     -- 3 input functions                    ; 87   ; 36               ; 159                            ; 0                              ;
+;     -- <=2 input functions                  ; 182  ; 37               ; 141                            ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; Logic elements by mode                      ;      ;                  ;                                ;                                ;
+;     -- normal mode                          ; 349  ; 120              ; 502                            ; 0                              ;
+;     -- arithmetic mode                      ; 94   ; 8                ; 107                            ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; Total registers                             ; 379  ; 91               ; 555                            ; 0                              ;
+;     -- Dedicated logic registers            ; 379  ; 91               ; 555                            ; 0                              ;
+;     -- I/O registers                        ; 0    ; 0                ; 0                              ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; Virtual pins                                ; 0    ; 0                ; 0                              ; 0                              ;
+; I/O pins                                    ; 164  ; 0                ; 0                              ; 0                              ;
+; Embedded Multiplier 9-bit elements          ; 0    ; 0                ; 0                              ; 0                              ;
+; Total memory bits                           ; 4096 ; 0                ; 1572864                        ; 0                              ;
+; Total RAM block bits                        ; 0    ; 0                ; 0                              ; 0                              ;
+; JTAG                                        ; 1    ; 0                ; 0                              ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; Connections                                 ;      ;                  ;                                ;                                ;
+;     -- Input Connections                    ; 49   ; 134              ; 1337                           ; 0                              ;
+;     -- Registered Input Connections         ; 0    ; 102              ; 617                            ; 0                              ;
+;     -- Output Connections                   ; 1129 ; 357              ; 34                             ; 0                              ;
+;     -- Registered Output Connections        ; 478  ; 357              ; 0                              ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; Internal Connections                        ;      ;                  ;                                ;                                ;
+;     -- Total Connections                    ; 4191 ; 1052             ; 9949                           ; 0                              ;
+;     -- Registered Connections               ; 1856 ; 820              ; 7204                           ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; External Connections                        ;      ;                  ;                                ;                                ;
+;     -- Top                                  ; 96   ; 123              ; 959                            ; 0                              ;
+;     -- sld_hub:auto_hub                     ; 123  ; 20               ; 348                            ; 0                              ;
+;     -- sld_signaltap:top_level_v_file       ; 959  ; 348              ; 64                             ; 0                              ;
+;     -- hard_block:auto_generated_inst       ; 0    ; 0                ; 0                              ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; Partition Interface                         ;      ;                  ;                                ;                                ;
+;     -- Input Ports                          ; 17   ; 45               ; 95                             ; 0                              ;
+;     -- Output Ports                         ; 107  ; 62               ; 29                             ; 0                              ;
+;     -- Bidir Ports                          ; 48   ; 0                ; 0                              ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; Registered Ports                            ;      ;                  ;                                ;                                ;
+;     -- Registered Input Ports               ; 0    ; 4                ; 21                             ; 0                              ;
+;     -- Registered Output Ports              ; 0    ; 29               ; 15                             ; 0                              ;
+;                                             ;      ;                  ;                                ;                                ;
+; Port Connectivity                           ;      ;                  ;                                ;                                ;
+;     -- Input Ports driven by GND            ; 0    ; 0                ; 15                             ; 0                              ;
+;     -- Output Ports driven by GND           ; 0    ; 28               ; 2                              ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0    ; 0                ; 17                             ; 0                              ;
+;     -- Output Ports driven by VCC           ; 0    ; 0                ; 1                              ; 0                              ;
+;     -- Input Ports with no Source           ; 0    ; 25               ; 16                             ; 0                              ;
+;     -- Output Ports with no Source          ; 0    ; 0                ; 0                              ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0    ; 30               ; 30                             ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0    ; 29               ; 17                             ; 0                              ;
++---------------------------------------------+------+------------------+--------------------------------+--------------------------------+
+Note: Resource usage numbers presented for Partitions containing post-synthesis logic are estimates.  For Partitions containing post-fit logic, resource usage numbers are accurate based on previous placement information.  Actual Fitter results may vary depending on current Fitter Preservation Level assignments.
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Partition Merge Partition Pin Processing                                                                              ;
++-----------------------------------+-----------+---------------+----------+--------------------------------------------+
+; Name                              ; Partition ; Type          ; Location ; Status                                     ;
++-----------------------------------+-----------+---------------+----------+--------------------------------------------+
+; VGA_B[0]                          ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_B[0]                   ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_B[0]~output            ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_B[1]                          ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_B[1]                   ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_B[1]~output            ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_B[2]                          ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_B[2]                   ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_B[2]~output            ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_B[3]                          ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_B[3]                   ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_B[3]~output            ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_B[4]                          ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_B[4]                   ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_B[4]~output            ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_B[5]                          ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_B[5]                   ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_B[5]~output            ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_B[6]                          ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_B[6]                   ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_B[6]~output            ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_B[7]                          ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_B[7]                   ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_B[7]~output            ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_G[0]                          ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_G[0]                   ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_G[0]~output            ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_G[1]                          ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_G[1]                   ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_G[1]~output            ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_G[2]                          ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_G[2]                   ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_G[2]~output            ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_G[3]                          ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_G[3]                   ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_G[3]~output            ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_G[4]                          ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_G[4]                   ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_G[4]~output            ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_G[5]                          ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_G[5]                   ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_G[5]~output            ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_G[6]                          ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_G[6]                   ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_G[6]~output            ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_G[7]                          ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_G[7]                   ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_G[7]~output            ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_Hsync                         ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_Hsync                  ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_Hsync~output           ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_Nblank                        ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_Nblank                 ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_Nblank~output          ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_Nsync                         ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_Nsync                  ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_Nsync~output           ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_R[0]                          ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_R[0]                   ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_R[0]~output            ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_R[1]                          ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_R[1]                   ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_R[1]~output            ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_R[2]                          ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_R[2]                   ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_R[2]~output            ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_R[3]                          ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_R[3]                   ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_R[3]~output            ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_R[4]                          ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_R[4]                   ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_R[4]~output            ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_R[5]                          ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_R[5]                   ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_R[5]~output            ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_R[6]                          ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_R[6]                   ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_R[6]~output            ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_R[7]                          ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_R[7]                   ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_R[7]~output            ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_Vsync                         ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_Vsync                  ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_Vsync~output           ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; VGA_clkout                        ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- VGA_clkout                 ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- VGA_clkout~output          ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; altera_reserved_tck               ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- altera_reserved_tck        ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- altera_reserved_tck~input  ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; altera_reserved_tdi               ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- altera_reserved_tdi        ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- altera_reserved_tdi~input  ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; altera_reserved_tdo               ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- altera_reserved_tdo        ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- altera_reserved_tdo~output ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; altera_reserved_tms               ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- altera_reserved_tms        ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- altera_reserved_tms~input  ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; button_resend                     ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- button_resend              ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- button_resend~input        ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; button_reset                      ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- button_reset               ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- button_reset~input         ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; camera_data[0]                    ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- camera_data[0]             ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- camera_data[0]~input       ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; camera_data[1]                    ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- camera_data[1]             ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- camera_data[1]~input       ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; camera_data[2]                    ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- camera_data[2]             ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- camera_data[2]~input       ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; camera_data[3]                    ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- camera_data[3]             ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- camera_data[3]~input       ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; camera_data[4]                    ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- camera_data[4]             ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- camera_data[4]~input       ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; camera_data[5]                    ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- camera_data[5]             ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- camera_data[5]~input       ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; camera_data[6]                    ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- camera_data[6]             ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- camera_data[6]~input       ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; camera_data[7]                    ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- camera_data[7]             ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- camera_data[7]~input       ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; camera_href                       ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- camera_href                ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- camera_href~input          ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; camera_pclk                       ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- camera_pclk                ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- camera_pclk~input          ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; camera_pwdn                       ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- camera_pwdn                ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- camera_pwdn~output         ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; camera_reset                      ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- camera_reset               ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- camera_reset~output        ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; camera_sioc                       ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- camera_sioc                ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- camera_sioc~output         ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; camera_siod                       ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- camera_siod                ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- camera_siod~output         ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; camera_vsync                      ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- camera_vsync               ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- camera_vsync~input         ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; camera_xclk                       ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- camera_xclk                ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- camera_xclk~output         ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; clk_in_raw                        ; Top       ; Input Port    ; n/a      ;                                            ;
+;     -- clk_in_raw                 ; Top       ; Input Pad     ; Unplaced ; Synthesized                                ;
+;     -- clk_in_raw~input           ; Top       ; Input Buffer  ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; led_config_finished               ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- led_config_finished        ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- led_config_finished~output ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; pre_syn.bp.k50_clk_out            ; Top       ; Output Port   ; n/a      ;                                            ;
+;                                   ;           ;               ;          ;                                            ;
+; pre_syn.bp.tc_sram_select_0_      ; Top       ; Output Port   ; n/a      ;                                            ;
+;                                   ;           ;               ;          ;                                            ;
+; pre_syn.bp.tc_sram_select_1_      ; Top       ; Output Port   ; n/a      ;                                            ;
+;                                   ;           ;               ;          ;                                            ;
+; pre_syn.bp.tc_sram_select_2_      ; Top       ; Output Port   ; n/a      ;                                            ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_addr[0]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_x_addr[0]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_x_addr[0]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_addr[10]                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_x_addr[10]            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_x_addr[10]~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_addr[11]                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_x_addr[11]            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_x_addr[11]~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_addr[12]                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_x_addr[12]            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_x_addr[12]~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_addr[13]                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_x_addr[13]            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_x_addr[13]~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_addr[14]                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_x_addr[14]            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_x_addr[14]~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_addr[15]                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_x_addr[15]            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_x_addr[15]~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_addr[16]                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_x_addr[16]            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_x_addr[16]~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_addr[17]                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_x_addr[17]            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_x_addr[17]~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_addr[18]                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_x_addr[18]            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_x_addr[18]~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_addr[19]                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_x_addr[19]            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_x_addr[19]~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_addr[1]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_x_addr[1]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_x_addr[1]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_addr[2]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_x_addr[2]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_x_addr[2]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_addr[3]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_x_addr[3]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_x_addr[3]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_addr[4]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_x_addr[4]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_x_addr[4]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_addr[5]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_x_addr[5]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_x_addr[5]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_addr[6]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_x_addr[6]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_x_addr[6]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_addr[7]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_x_addr[7]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_x_addr[7]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_addr[8]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_x_addr[8]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_x_addr[8]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_addr[9]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_x_addr[9]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_x_addr[9]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_ce_a_n                     ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_x_ce_a_n              ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_x_ce_a_n~output       ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_data_io[0]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_x_data_io[0]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_x_data_io[0]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_data_io[10]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_x_data_io[10]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_x_data_io[10]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_data_io[11]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_x_data_io[11]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_x_data_io[11]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_data_io[12]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_x_data_io[12]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_x_data_io[12]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_data_io[13]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_x_data_io[13]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_x_data_io[13]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_data_io[14]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_x_data_io[14]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_x_data_io[14]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_data_io[15]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_x_data_io[15]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_x_data_io[15]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_data_io[1]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_x_data_io[1]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_x_data_io[1]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_data_io[2]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_x_data_io[2]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_x_data_io[2]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_data_io[3]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_x_data_io[3]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_x_data_io[3]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_data_io[4]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_x_data_io[4]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_x_data_io[4]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_data_io[5]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_x_data_io[5]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_x_data_io[5]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_data_io[6]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_x_data_io[6]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_x_data_io[6]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_data_io[7]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_x_data_io[7]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_x_data_io[7]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_data_io[8]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_x_data_io[8]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_x_data_io[8]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_data_io[9]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_x_data_io[9]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_x_data_io[9]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_lb_a_n                     ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_x_lb_a_n              ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_x_lb_a_n~output       ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_oe_n                       ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_x_oe_n                ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_x_oe_n~output         ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_ub_a_n                     ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_x_ub_a_n              ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_x_ub_a_n~output       ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_x_we_n                       ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_x_we_n                ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_x_we_n~output         ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_addr[0]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_y_addr[0]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_y_addr[0]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_addr[10]                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_y_addr[10]            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_y_addr[10]~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_addr[11]                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_y_addr[11]            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_y_addr[11]~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_addr[12]                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_y_addr[12]            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_y_addr[12]~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_addr[13]                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_y_addr[13]            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_y_addr[13]~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_addr[14]                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_y_addr[14]            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_y_addr[14]~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_addr[15]                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_y_addr[15]            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_y_addr[15]~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_addr[1]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_y_addr[1]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_y_addr[1]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_addr[2]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_y_addr[2]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_y_addr[2]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_addr[3]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_y_addr[3]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_y_addr[3]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_addr[4]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_y_addr[4]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_y_addr[4]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_addr[5]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_y_addr[5]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_y_addr[5]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_addr[6]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_y_addr[6]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_y_addr[6]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_addr[7]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_y_addr[7]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_y_addr[7]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_addr[8]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_y_addr[8]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_y_addr[8]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_addr[9]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_y_addr[9]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_y_addr[9]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_ce_a_n                     ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_y_ce_a_n              ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_y_ce_a_n~output       ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_data_io[0]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_y_data_io[0]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_y_data_io[0]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_data_io[10]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_y_data_io[10]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_y_data_io[10]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_data_io[11]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_y_data_io[11]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_y_data_io[11]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_data_io[12]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_y_data_io[12]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_y_data_io[12]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_data_io[13]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_y_data_io[13]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_y_data_io[13]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_data_io[14]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_y_data_io[14]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_y_data_io[14]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_data_io[15]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_y_data_io[15]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_y_data_io[15]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_data_io[1]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_y_data_io[1]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_y_data_io[1]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_data_io[2]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_y_data_io[2]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_y_data_io[2]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_data_io[3]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_y_data_io[3]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_y_data_io[3]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_data_io[4]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_y_data_io[4]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_y_data_io[4]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_data_io[5]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_y_data_io[5]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_y_data_io[5]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_data_io[6]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_y_data_io[6]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_y_data_io[6]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_data_io[7]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_y_data_io[7]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_y_data_io[7]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_data_io[8]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_y_data_io[8]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_y_data_io[8]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_data_io[9]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_y_data_io[9]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_y_data_io[9]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_lb_a_n                     ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_y_lb_a_n              ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_y_lb_a_n~output       ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_oe_n                       ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_y_oe_n                ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_y_oe_n~output         ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_ub_a_n                     ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_y_ub_a_n              ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_y_ub_a_n~output       ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_y_we_n                       ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_y_we_n                ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_y_we_n~output         ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_addr[0]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_z_addr[0]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_z_addr[0]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_addr[10]                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_z_addr[10]            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_z_addr[10]~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_addr[11]                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_z_addr[11]            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_z_addr[11]~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_addr[12]                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_z_addr[12]            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_z_addr[12]~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_addr[13]                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_z_addr[13]            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_z_addr[13]~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_addr[14]                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_z_addr[14]            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_z_addr[14]~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_addr[15]                   ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_z_addr[15]            ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_z_addr[15]~output     ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_addr[1]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_z_addr[1]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_z_addr[1]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_addr[2]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_z_addr[2]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_z_addr[2]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_addr[3]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_z_addr[3]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_z_addr[3]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_addr[4]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_z_addr[4]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_z_addr[4]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_addr[5]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_z_addr[5]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_z_addr[5]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_addr[6]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_z_addr[6]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_z_addr[6]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_addr[7]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_z_addr[7]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_z_addr[7]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_addr[8]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_z_addr[8]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_z_addr[8]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_addr[9]                    ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_z_addr[9]             ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_z_addr[9]~output      ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_ce_a_n                     ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_z_ce_a_n              ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_z_ce_a_n~output       ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_data_io[0]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_z_data_io[0]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_z_data_io[0]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_data_io[10]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_z_data_io[10]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_z_data_io[10]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_data_io[11]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_z_data_io[11]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_z_data_io[11]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_data_io[12]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_z_data_io[12]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_z_data_io[12]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_data_io[13]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_z_data_io[13]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_z_data_io[13]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_data_io[14]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_z_data_io[14]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_z_data_io[14]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_data_io[15]                ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_z_data_io[15]         ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_z_data_io[15]~output  ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_data_io[1]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_z_data_io[1]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_z_data_io[1]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_data_io[2]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_z_data_io[2]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_z_data_io[2]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_data_io[3]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_z_data_io[3]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_z_data_io[3]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_data_io[4]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_z_data_io[4]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_z_data_io[4]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_data_io[5]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_z_data_io[5]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_z_data_io[5]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_data_io[6]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_z_data_io[6]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_z_data_io[6]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_data_io[7]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_z_data_io[7]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_z_data_io[7]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_data_io[8]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_z_data_io[8]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_z_data_io[8]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_data_io[9]                 ; Top       ; Bidir Port    ; n/a      ;                                            ;
+;     -- sram_z_data_io[9]          ; Top       ; Bidir Pad     ; Unplaced ; Synthesized                                ;
+;     -- sram_z_data_io[9]~output   ; Top       ; Output Buffer ; Unplaced ; Preserved from Synthesis Netlist (WYSIWYG) ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_lb_a_n                     ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_z_lb_a_n              ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_z_lb_a_n~output       ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_oe_n                       ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_z_oe_n                ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_z_oe_n~output         ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_ub_a_n                     ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_z_ub_a_n              ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_z_ub_a_n~output       ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
+; sram_z_we_n                       ; Top       ; Output Port   ; n/a      ;                                            ;
+;     -- sram_z_we_n                ; Top       ; Output Pad    ; Unplaced ; Synthesized                                ;
+;     -- sram_z_we_n~output         ; Top       ; Output Buffer ; Unplaced ; Synthesized                                ;
+;                                   ;           ;               ;          ;                                            ;
++-----------------------------------+-----------+---------------+----------+--------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Partition Merge Resource Usage Summary                                 ;
++---------------------------------------------+--------------------------+
+; Resource                                    ; Usage                    ;
++---------------------------------------------+--------------------------+
+; Estimated Total logic elements              ; 1,528                    ;
+;                                             ;                          ;
+; Total combinational functions               ; 1180                     ;
+; Logic element usage by number of LUT inputs ;                          ;
+;     -- 4 input functions                    ; 538                      ;
+;     -- 3 input functions                    ; 282                      ;
+;     -- <=2 input functions                  ; 360                      ;
+;                                             ;                          ;
+; Logic elements by mode                      ;                          ;
+;     -- normal mode                          ; 971                      ;
+;     -- arithmetic mode                      ; 209                      ;
+;                                             ;                          ;
+; Total registers                             ; 1025                     ;
+;     -- Dedicated logic registers            ; 1025                     ;
+;     -- I/O registers                        ; 0                        ;
+;                                             ;                          ;
+; I/O pins                                    ; 164                      ;
+; Total memory bits                           ; 1576960                  ;
+;                                             ;                          ;
+; Embedded Multiplier 9-bit elements          ; 0                        ;
+;                                             ;                          ;
+; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
+; Maximum fan-out                             ; 587                      ;
+; Total fan-out                               ; 13551                    ;
+; Average fan-out                             ; 4.84                     ;
++---------------------------------------------+--------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge RAM Summary                                                                                                                                                                                                                                                                                                                ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------------------------------------+
+; Name                                                                                                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size    ; MIF                                ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------------------------------------+
+; ov7670_controller:ovctrl|ov7670_registers:Inst_ov7670_registers|altsyncram:Mux0_rtl_0|altsyncram_qm01:auto_generated|ALTSYNCRAM                                                                       ; AUTO ; ROM              ; 256          ; 16           ; --           ; --           ; 4096    ; TripleBuffer.TripleBuffer0.rtl.mif ;
+; sld_signaltap:top_level_v_file|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_4h24:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 131072       ; 12           ; 131072       ; 12           ; 1572864 ; None                               ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------------------------------------+
+
+
++--------------------------+
+; Partition Merge Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Partition Merge
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Tue Oct 02 21:33:03 2018
+Info: Command: quartus_cdb --read_settings_files=off --write_settings_files=off TripleBuffer -c TripleBuffer_top --merge=on
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (35007): Using synthesis netlist for partition "Top"
+Info (35007): Using synthesis netlist for partition "sld_hub:auto_hub"
+Info (35007): Using synthesis netlist for partition "sld_signaltap:top_level_v_file"
+Info (35024): Successfully connected in-system debug instance "top_level_v_file" to all 47 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
+Info (35002): Resolved and merged 3 partition(s)
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Critical Warning (138067): Current license file does not support incremental compilation. The Quartus Prime software removes all the user-specified design partitions in the design automatically.
+Info (21057): Implemented 1935 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 17 input pins
+    Info (21059): Implemented 103 output pins
+    Info (21060): Implemented 48 bidirectional pins
+    Info (21061): Implemented 1558 logic cells
+    Info (21064): Implemented 208 RAM segments
+Info: Quartus Prime Partition Merge was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4731 megabytes
+    Info: Processing ended: Tue Oct 02 21:33:05 2018
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

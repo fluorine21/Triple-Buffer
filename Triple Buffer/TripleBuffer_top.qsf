@@ -1,0 +1,408 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2017  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+# Date created = 20:08:34  May 14, 2018
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		TripleBuffer_top_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY TripleBuffer_top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 17.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:08:34  MAY 14, 2018"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_location_assignment PIN_AE16 -to camera_data[7]
+set_location_assignment PIN_AD21 -to camera_data[6]
+set_location_assignment PIN_Y16 -to camera_data[5]
+set_location_assignment PIN_AC21 -to camera_data[4]
+set_location_assignment PIN_Y17 -to camera_data[3]
+set_location_assignment PIN_AB21 -to camera_data[2]
+set_location_assignment PIN_AC15 -to camera_data[1]
+set_location_assignment PIN_AB22 -to camera_data[0]
+set_location_assignment PIN_AC22 -to camera_href
+set_location_assignment PIN_AC19 -to camera_pclk
+set_location_assignment PIN_AD19 -to camera_pwdn
+set_location_assignment PIN_AF15 -to camera_reset
+set_location_assignment PIN_AF24 -to camera_sioc
+set_location_assignment PIN_AE21 -to camera_siod
+set_location_assignment PIN_AF25 -to camera_vsync
+set_location_assignment PIN_AF16 -to camera_xclk
+set_location_assignment PIN_E21 -to led_config_finished
+set_location_assignment PIN_M23 -to button_reset
+set_location_assignment PIN_T8 -to sram_x_addr[19]
+set_location_assignment PIN_AB8 -to sram_x_addr[18]
+set_location_assignment PIN_AB9 -to sram_x_addr[17]
+set_location_assignment PIN_AC11 -to sram_x_addr[16]
+set_location_assignment PIN_AB11 -to sram_x_addr[15]
+set_location_assignment PIN_AA4 -to sram_x_addr[14]
+set_location_assignment PIN_AC3 -to sram_x_addr[13]
+set_location_assignment PIN_AB4 -to sram_x_addr[12]
+set_location_assignment PIN_AD3 -to sram_x_addr[11]
+set_location_assignment PIN_AF2 -to sram_x_addr[10]
+set_location_assignment PIN_T7 -to sram_x_addr[9]
+set_location_assignment PIN_AF5 -to sram_x_addr[8]
+set_location_assignment PIN_AC5 -to sram_x_addr[7]
+set_location_assignment PIN_AB5 -to sram_x_addr[6]
+set_location_assignment PIN_AE6 -to sram_x_addr[5]
+set_location_assignment PIN_AB6 -to sram_x_addr[4]
+set_location_assignment PIN_AC7 -to sram_x_addr[3]
+set_location_assignment PIN_AE7 -to sram_x_addr[2]
+set_location_assignment PIN_AD7 -to sram_x_addr[1]
+set_location_assignment PIN_AB7 -to sram_x_addr[0]
+set_location_assignment PIN_AF8 -to sram_x_ce_a_n
+set_location_assignment PIN_AG3 -to sram_x_data_io[15]
+set_location_assignment PIN_AF3 -to sram_x_data_io[14]
+set_location_assignment PIN_AE4 -to sram_x_data_io[13]
+set_location_assignment PIN_AE3 -to sram_x_data_io[12]
+set_location_assignment PIN_AE1 -to sram_x_data_io[11]
+set_location_assignment PIN_AE2 -to sram_x_data_io[10]
+set_location_assignment PIN_AD2 -to sram_x_data_io[9]
+set_location_assignment PIN_AD1 -to sram_x_data_io[8]
+set_location_assignment PIN_AF7 -to sram_x_data_io[7]
+set_location_assignment PIN_AH6 -to sram_x_data_io[6]
+set_location_assignment PIN_AG6 -to sram_x_data_io[5]
+set_location_assignment PIN_AF6 -to sram_x_data_io[4]
+set_location_assignment PIN_AH4 -to sram_x_data_io[3]
+set_location_assignment PIN_AG4 -to sram_x_data_io[2]
+set_location_assignment PIN_AF4 -to sram_x_data_io[1]
+set_location_assignment PIN_AH3 -to sram_x_data_io[0]
+set_location_assignment PIN_AD4 -to sram_x_lb_a_n
+set_location_assignment PIN_AD5 -to sram_x_oe_n
+set_location_assignment PIN_AC4 -to sram_x_ub_a_n
+set_location_assignment PIN_AE8 -to sram_x_we_n
+set_location_assignment PIN_P28 -to sram_y_addr[15]
+set_location_assignment PIN_P27 -to sram_y_addr[14]
+set_location_assignment PIN_J25 -to sram_y_addr[13]
+set_location_assignment PIN_J26 -to sram_y_addr[12]
+set_location_assignment PIN_L27 -to sram_y_addr[11]
+set_location_assignment PIN_L28 -to sram_y_addr[10]
+set_location_assignment PIN_V25 -to sram_y_addr[9]
+set_location_assignment PIN_V26 -to sram_y_addr[8]
+set_location_assignment PIN_R27 -to sram_y_addr[7]
+set_location_assignment PIN_R28 -to sram_y_addr[6]
+set_location_assignment PIN_U27 -to sram_y_addr[5]
+set_location_assignment PIN_U28 -to sram_y_addr[4]
+set_location_assignment PIN_V27 -to sram_y_addr[3]
+set_location_assignment PIN_V28 -to sram_y_addr[2]
+set_location_assignment PIN_U22 -to sram_y_addr[1]
+set_location_assignment PIN_V22 -to sram_y_addr[0]
+set_location_assignment PIN_T25 -to sram_y_data_io[15]
+set_location_assignment PIN_T26 -to sram_y_data_io[14]
+set_location_assignment PIN_U25 -to sram_y_data_io[13]
+set_location_assignment PIN_U26 -to sram_y_data_io[12]
+set_location_assignment PIN_L21 -to sram_y_data_io[11]
+set_location_assignment PIN_L22 -to sram_y_data_io[10]
+set_location_assignment PIN_N25 -to sram_y_data_io[9]
+set_location_assignment PIN_N26 -to sram_y_data_io[8]
+set_location_assignment PIN_P25 -to sram_y_data_io[7]
+set_location_assignment PIN_P26 -to sram_y_data_io[6]
+set_location_assignment PIN_P21 -to sram_y_data_io[5]
+set_location_assignment PIN_R21 -to sram_y_data_io[4]
+set_location_assignment PIN_R22 -to sram_y_data_io[3]
+set_location_assignment PIN_R23 -to sram_y_data_io[2]
+set_location_assignment PIN_T21 -to sram_y_data_io[1]
+set_location_assignment PIN_T22 -to sram_y_data_io[0]
+set_location_assignment PIN_V24 -to sram_y_oe_n
+set_location_assignment PIN_V23 -to sram_y_we_n
+set_location_assignment PIN_D28 -to sram_z_addr[15]
+set_location_assignment PIN_D27 -to sram_z_addr[14]
+set_location_assignment PIN_E27 -to sram_z_addr[13]
+set_location_assignment PIN_E28 -to sram_z_addr[12]
+set_location_assignment PIN_F27 -to sram_z_addr[11]
+set_location_assignment PIN_F28 -to sram_z_addr[10]
+set_location_assignment PIN_G27 -to sram_z_addr[9]
+set_location_assignment PIN_G28 -to sram_z_addr[8]
+set_location_assignment PIN_K27 -to sram_z_addr[7]
+set_location_assignment PIN_K28 -to sram_z_addr[6]
+set_location_assignment PIN_M27 -to sram_z_addr[5]
+set_location_assignment PIN_M28 -to sram_z_addr[4]
+set_location_assignment PIN_K21 -to sram_z_addr[3]
+set_location_assignment PIN_K22 -to sram_z_addr[2]
+set_location_assignment PIN_H23 -to sram_z_addr[1]
+set_location_assignment PIN_H24 -to sram_z_addr[0]
+set_location_assignment PIN_F24 -to sram_z_data_io[15]
+set_location_assignment PIN_F25 -to sram_z_data_io[14]
+set_location_assignment PIN_D26 -to sram_z_data_io[13]
+set_location_assignment PIN_C27 -to sram_z_data_io[12]
+set_location_assignment PIN_F26 -to sram_z_data_io[11]
+set_location_assignment PIN_E26 -to sram_z_data_io[10]
+set_location_assignment PIN_G25 -to sram_z_data_io[9]
+set_location_assignment PIN_G26 -to sram_z_data_io[8]
+set_location_assignment PIN_H25 -to sram_z_data_io[7]
+set_location_assignment PIN_H26 -to sram_z_data_io[6]
+set_location_assignment PIN_K25 -to sram_z_data_io[5]
+set_location_assignment PIN_K26 -to sram_z_data_io[4]
+set_location_assignment PIN_L23 -to sram_z_data_io[3]
+set_location_assignment PIN_L24 -to sram_z_data_io[2]
+set_location_assignment PIN_M25 -to sram_z_data_io[1]
+set_location_assignment PIN_M26 -to sram_z_data_io[0]
+set_location_assignment PIN_G24 -to sram_z_oe_n
+set_location_assignment PIN_G23 -to sram_z_we_n
+set_location_assignment PIN_H10 -to VGA_R[7]
+set_location_assignment PIN_H8 -to VGA_R[6]
+set_location_assignment PIN_J12 -to VGA_R[5]
+set_location_assignment PIN_G10 -to VGA_R[4]
+set_location_assignment PIN_F12 -to VGA_R[3]
+set_location_assignment PIN_D10 -to VGA_R[2]
+set_location_assignment PIN_E11 -to VGA_R[1]
+set_location_assignment PIN_E12 -to VGA_R[0]
+set_location_assignment PIN_C13 -to VGA_Vsync
+set_location_assignment PIN_A12 -to VGA_clkout
+set_location_assignment PIN_C10 -to VGA_Nsync
+set_location_assignment PIN_F11 -to VGA_Nblank
+set_location_assignment PIN_G13 -to VGA_Hsync
+set_location_assignment PIN_C9 -to VGA_G[7]
+set_location_assignment PIN_F10 -to VGA_G[6]
+set_location_assignment PIN_B8 -to VGA_G[5]
+set_location_assignment PIN_C8 -to VGA_G[4]
+set_location_assignment PIN_H12 -to VGA_G[3]
+set_location_assignment PIN_F8 -to VGA_G[2]
+set_location_assignment PIN_G11 -to VGA_G[1]
+set_location_assignment PIN_G8 -to VGA_G[0]
+set_location_assignment PIN_D12 -to VGA_B[7]
+set_location_assignment PIN_D11 -to VGA_B[6]
+set_location_assignment PIN_C12 -to VGA_B[5]
+set_location_assignment PIN_A11 -to VGA_B[4]
+set_location_assignment PIN_B11 -to VGA_B[3]
+set_location_assignment PIN_C11 -to VGA_B[2]
+set_location_assignment PIN_A10 -to VGA_B[1]
+set_location_assignment PIN_B10 -to VGA_B[0]
+set_global_assignment -name ENABLE_OCT_DONE OFF
+set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
+set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
+set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "PASSIVE SERIAL"
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_location_assignment PIN_G19 -to sram_y_ce_a_n
+set_location_assignment PIN_F19 -to sram_y_lb_a_n
+set_location_assignment PIN_E19 -to sram_y_ub_a_n
+set_location_assignment PIN_F21 -to sram_z_ce_a_n
+set_location_assignment PIN_F15 -to sram_z_lb_a_n
+set_location_assignment PIN_G15 -to sram_z_ub_a_n
+set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name USE_SIGNALTAP_FILE SigTap.stp
+set_location_assignment PIN_M21 -to button_resend
+set_location_assignment PIN_Y2 -to clk_in_raw
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to camera_data[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to camera_data[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to camera_data[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to camera_data[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to camera_data[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to camera_data[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to camera_data[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to camera_data[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to camera_href
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to camera_pclk
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to camera_pwdn
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to camera_reset
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to camera_sioc
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to camera_siod
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to camera_vsync
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to camera_xclk
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_addr[19]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_addr[18]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_addr[17]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_addr[16]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_addr[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_addr[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_addr[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_addr[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_addr[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_addr[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_addr[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_addr[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_addr[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_addr[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_addr[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_addr[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_addr[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_addr[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_addr[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_addr[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_ce_a_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_data_io[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_data_io[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_data_io[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_data_io[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_data_io[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_data_io[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_data_io[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_data_io[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_data_io[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_data_io[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_data_io[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_data_io[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_data_io[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_data_io[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_data_io[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_data_io[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_lb_a_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_oe_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_ub_a_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_x_we_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_addr[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_addr[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_addr[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_addr[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_addr[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_addr[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_addr[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_addr[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_addr[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_addr[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_addr[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_addr[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_addr[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_addr[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_addr[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_addr[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_data_io[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_data_io[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_data_io[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_data_io[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_data_io[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_data_io[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_data_io[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_data_io[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_data_io[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_data_io[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_data_io[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_data_io[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_data_io[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_data_io[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_data_io[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_data_io[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_oe_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_y_we_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_addr[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_addr[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_addr[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_addr[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_addr[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_addr[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_addr[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_addr[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_addr[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_addr[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_addr[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_addr[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_addr[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_addr[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_addr[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_addr[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_data_io[15]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_data_io[14]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_data_io[13]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_data_io[12]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_data_io[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_data_io[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_data_io[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_data_io[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_data_io[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_data_io[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_data_io[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_data_io[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_data_io[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_data_io[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_data_io[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_data_io[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to sram_z_lb_a_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_oe_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to sram_z_we_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_B[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_B[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_B[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_B[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_B[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_B[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_B[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_B[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_clkout
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_G[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_G[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_G[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_G[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_G[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_G[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_G[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_G[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_Hsync
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_Nblank
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_Nsync
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_R[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_R[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_R[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_R[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_R[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_R[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_R[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_R[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to VGA_Vsync
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VERILOG_FILE dummy_memory.v
+set_global_assignment -name VHDL_FILE i2c_sender.vhd
+set_global_assignment -name VERILOG_INCLUDE_FILE bus_parameters.vh
+set_global_assignment -name VHDL_FILE ov7670_capture.vhd
+set_global_assignment -name VHDL_FILE ov7670_registers.vhd
+set_global_assignment -name VHDL_FILE ov7670_controller.vhd
+set_global_assignment -name BDF_FILE TripleBuffer_top.bdf
+set_global_assignment -name VERILOG_FILE triple_controller.v
+set_global_assignment -name VERILOG_FILE triple_muxes.v
+set_global_assignment -name VERILOG_FILE sram_controller.v
+set_global_assignment -name VERILOG_FILE capture_buffer.v
+set_global_assignment -name VERILOG_FILE transmission_buffer.v
+set_global_assignment -name VHDL_FILE vga.vhd
+set_global_assignment -name VHDL_FILE rgb.vhd
+set_global_assignment -name VHDL_FILE vga_addr_gen.vhd
+set_global_assignment -name VERILOG_FILE clock_dividers.v
+set_global_assignment -name QIP_FILE pll150.qip
+set_global_assignment -name SIGNALTAP_FILE SigTap.stp
+set_global_assignment -name VERILOG_FILE test_bench.v
+set_global_assignment -name SDC_FILE TripleBuffer_top.sdc
+set_global_assignment -name VERILOG_FILE TripleBuffer_top.v
+set_global_assignment -name SLD_FILE db/SigTap_auto_stripped.stp

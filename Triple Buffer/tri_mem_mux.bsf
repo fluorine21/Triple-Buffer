@@ -1,0 +1,187 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 336 256)
+	(text "tri_mem_mux" (rect 5 0 62 12)(font "Arial" ))
+	(text "inst" (rect 8 224 20 236)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "addr_a[addr_bus_size-1..0]" (rect 0 0 107 12)(font "Arial" ))
+		(text "addr_a[addr_bus_size-1..0]" (rect 21 27 128 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "data_a[data_bus_size-1..0]" (rect 0 0 105 12)(font "Arial" ))
+		(text "data_a[data_bus_size-1..0]" (rect 21 43 126 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "start_a" (rect 0 0 28 12)(font "Arial" ))
+		(text "start_a" (rect 21 59 49 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "rw_a" (rect 0 0 20 12)(font "Arial" ))
+		(text "rw_a" (rect 21 75 41 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "addr_b[addr_bus_size-1..0]" (rect 0 0 107 12)(font "Arial" ))
+		(text "addr_b[addr_bus_size-1..0]" (rect 21 91 128 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "data_b[data_bus_size-1..0]" (rect 0 0 105 12)(font "Arial" ))
+		(text "data_b[data_bus_size-1..0]" (rect 21 107 126 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "start_b" (rect 0 0 28 12)(font "Arial" ))
+		(text "start_b" (rect 21 123 49 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128)(line_width 1))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "rw_b" (rect 0 0 20 12)(font "Arial" ))
+		(text "rw_b" (rect 21 139 41 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 1))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "select[2..0]" (rect 0 0 42 12)(font "Arial" ))
+		(text "select[2..0]" (rect 21 155 63 167)(font "Arial" ))
+		(line (pt 0 160)(pt 16 160)(line_width 3))
+	)
+	(port
+		(pt 320 32)
+		(output)
+		(text "addr_x[addr_bus_size-1..0]" (rect 0 0 107 12)(font "Arial" ))
+		(text "addr_x[addr_bus_size-1..0]" (rect 192 27 299 39)(font "Arial" ))
+		(line (pt 320 32)(pt 304 32)(line_width 3))
+	)
+	(port
+		(pt 320 48)
+		(output)
+		(text "data_x[data_bus_size-1..0]" (rect 0 0 105 12)(font "Arial" ))
+		(text "data_x[data_bus_size-1..0]" (rect 194 43 299 55)(font "Arial" ))
+		(line (pt 320 48)(pt 304 48)(line_width 3))
+	)
+	(port
+		(pt 320 64)
+		(output)
+		(text "start_x" (rect 0 0 28 12)(font "Arial" ))
+		(text "start_x" (rect 271 59 299 71)(font "Arial" ))
+		(line (pt 320 64)(pt 304 64)(line_width 1))
+	)
+	(port
+		(pt 320 80)
+		(output)
+		(text "rw_x" (rect 0 0 20 12)(font "Arial" ))
+		(text "rw_x" (rect 279 75 299 87)(font "Arial" ))
+		(line (pt 320 80)(pt 304 80)(line_width 1))
+	)
+	(port
+		(pt 320 96)
+		(output)
+		(text "addr_y[addr_bus_size-1..0]" (rect 0 0 108 12)(font "Arial" ))
+		(text "addr_y[addr_bus_size-1..0]" (rect 191 91 299 103)(font "Arial" ))
+		(line (pt 320 96)(pt 304 96)(line_width 3))
+	)
+	(port
+		(pt 320 112)
+		(output)
+		(text "data_y[data_bus_size-1..0]" (rect 0 0 106 12)(font "Arial" ))
+		(text "data_y[data_bus_size-1..0]" (rect 193 107 299 119)(font "Arial" ))
+		(line (pt 320 112)(pt 304 112)(line_width 3))
+	)
+	(port
+		(pt 320 128)
+		(output)
+		(text "start_y" (rect 0 0 29 12)(font "Arial" ))
+		(text "start_y" (rect 270 123 299 135)(font "Arial" ))
+		(line (pt 320 128)(pt 304 128)(line_width 1))
+	)
+	(port
+		(pt 320 144)
+		(output)
+		(text "rw_y" (rect 0 0 21 12)(font "Arial" ))
+		(text "rw_y" (rect 278 139 299 151)(font "Arial" ))
+		(line (pt 320 144)(pt 304 144)(line_width 1))
+	)
+	(port
+		(pt 320 160)
+		(output)
+		(text "addr_z[addr_bus_size-1..0]" (rect 0 0 106 12)(font "Arial" ))
+		(text "addr_z[addr_bus_size-1..0]" (rect 193 155 299 167)(font "Arial" ))
+		(line (pt 320 160)(pt 304 160)(line_width 3))
+	)
+	(port
+		(pt 320 176)
+		(output)
+		(text "data_z[data_bus_size-1..0]" (rect 0 0 103 12)(font "Arial" ))
+		(text "data_z[data_bus_size-1..0]" (rect 196 171 299 183)(font "Arial" ))
+		(line (pt 320 176)(pt 304 176)(line_width 3))
+	)
+	(port
+		(pt 320 192)
+		(output)
+		(text "start_z" (rect 0 0 27 12)(font "Arial" ))
+		(text "start_z" (rect 272 187 299 199)(font "Arial" ))
+		(line (pt 320 192)(pt 304 192)(line_width 1))
+	)
+	(port
+		(pt 320 208)
+		(output)
+		(text "rw_z" (rect 0 0 18 12)(font "Arial" ))
+		(text "rw_z" (rect 281 203 299 215)(font "Arial" ))
+		(line (pt 320 208)(pt 304 208)(line_width 1))
+	)
+	(parameter
+		"data_bus_size"
+		"16"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"addr_bus_size"
+		"16"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 304 224)(line_width 1))
+	)
+	(annotation_block (parameter)(rect 336 -64 436 16))
+)

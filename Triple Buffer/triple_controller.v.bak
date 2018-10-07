@@ -1,0 +1,215 @@
+//Triple buffer controller
+
+//Need to implement a counter for each buffer to determine if it is too old\
+
+//I think we need to have VGA keeping track of the buffers, not the camera
+
+module tri_control(
+input wire clk,
+input wire reset,
+input wire camera_vsync,
+input wire vga_vsync,
+output reg [2:0] buffer_select,
+output reg error //Used to detect when an invalid buffer selection state has occured
+);
+
+localparam [1:0] X = 2'b00,
+					  Y = 2'b01,
+					  Z = 2'b10;
+					  
+localparam [2:0] A = 3'b000, //A->X : B->Y : D->Z
+					  B = 3'b001, //A->X : B->Z : D->Y
+					  C = 3'b010, //A->Y : B->x : D->Z
+					  D = 3'b011, //A->Y : B->Z : D->X
+					  E = 3'b100, //A->Z : B->X : D->Y
+					  F = 3'b101; //A->Z : B->Y : D->X
+					  
+reg [1:0] camera_buff;
+reg [1:0] vga_buff;
+
+//Buffer couters
+reg [1:0] x_cnt;
+reg [1:0] y_cnt;
+reg [1:0] z_cnt;
+//These are incremented every time vga switches into them
+//They are reset when the camera switches into them
+
+					  
+initial begin
+	camera_buff <= X;
+	vga_buff <= Y;
+	buffer_select <= A;
+	error <= 1'b0;
+	
+	x_cnt <= 2'b0;
+	y_cnt <= 2'b0;
+	z_cnt <= 2'b0;
+
+end
+					  
+always @ (posedge camera_vsync or negedge reset) begin //Might need to modify this depending on active state of vsync
+	if(reset == 1'b0) begin
+		camera_buff <= X;
+		x_cnt <= 2'b0;
+		y_cnt <= 2'b0;
+		z_cnt <= 2'b0;
+	end
+	else begin	
+		case(vga_buff) //Looking at which buffer is currently busy with VGA
+		
+			X: begin
+				if(camera_buff == Y) begin
+					camera_buff <= Z;
+					z_cnt <= 2'b0;
+					x_cnt <= x_cnt + 1'b1;
+					y_cnt <= y_cnt + 1'b1;
+				end
+				else begin
+					camera_buff <= Y;
+					y_cnt <= 2'b0;
+					x_cnt <= x_cnt + 1'b1;
+					z_cnt <= z_cnt + 1'b1;
+				end
+			end
+			
+			Y: begin
+				if(camera_buff == Z) begin
+					camera_buff <= X;
+					x_cnt <= 2'b0;
+					z_cnt <= z_cnt + 1'b1;
+					y_cnt <= y_cnt + 1'b1;
+				end
+				else begin
+					camera_buff <= Z;
+					z_cnt <= 2'b0;
+					x_cnt <= x_cnt + 1'b1;
+					y_cnt <= y_cnt + 1'b1;
+				end
+			end
+			
+			Z: begin
+				if(camera_buff == X) begin
+					camera_buff <= Y;
+					y_cnt <= 2'b0;
+					x_cnt <= x_cnt + 1'b1;
+					z_cnt <= z_cnt + 1'b1;
+				end
+				else begin
+					camera_buff <= X;
+					x_cnt <= 2'b0;
+					z_cnt <= z_cnt + 1'b1;
+					y_cnt <= y_cnt + 1'b1;
+				end
+			end
+			
+			default begin
+				camera_buff <= X;
+				x_cnt <= 2'b0;
+				z_cnt <= z_cnt + 1'b1;
+				y_cnt <= y_cnt + 1'b1;
+			end
+			
+		endcase
+	end
+end
+
+always @ (negedge vga_vsync or negedge reset) begin //Might need to modify this depending on active state of vsync
+	if(reset == 1'b0) begin
+		vga_buff <= Y;
+	end
+	
+	else begin
+		
+		case(camera_buff) //Looking at which buffer is currently busy with camera
+		
+			X: begin
+				if(vga_buff == Y && z_cnt < 2) begin
+					vga_buff <= Z;
+				end
+				else if(y_cnt < 2) begin
+					vga_buff <= Y;
+				end
+			end
+			
+			Y: begin
+				if(vga_buff == Z && x_cnt < 2) begin
+					vga_buff <= X;
+				end
+				else if(z_cnt < 2) begin
+					vga_buff <= Z;
+				end
+			end
+			
+			Z: begin
+				if(vga_buff == X && y_cnt < 2) begin
+					vga_buff <= Y;
+				end
+				else if(x_cnt < 2) begin
+					vga_buff <= X;
+				end
+			end
+			
+			default begin
+				vga_buff <= Y;
+			end
+			
+		endcase
+	end
+end
+
+
+//Pushing current buffer state out to buffer select line
+always @ (posedge clk or negedge reset) begin
+	if(reset == 1'b0) begin
+		buffer_select <= A;
+		error <= 1'b0;
+	end
+	else begin
+	
+		//Selection state dispatching for the MUX
+		case(camera_buff)
+		
+			X: begin
+				if(vga_buff == Y) begin
+					buffer_select <= A;
+				end
+				else if(vga_buff == Z) begin
+					buffer_select <= B;
+				end
+				
+				else begin
+					error <= 1'b1;
+				end
+			end
+			
+			Y: begin
+				if(vga_buff == X) begin
+					buffer_select <= C;
+				end
+				else if(vga_buff == Z) begin
+					buffer_select <= D;
+				end
+				
+				else begin
+					error <= 1'b1;
+				end
+			end
+			
+			Z: begin
+				if(vga_buff == X) begin
+					buffer_select <= E;
+				end
+				else if(vga_buff == Y) begin
+					buffer_select <= F;
+				end
+				
+				else begin
+					error <= 1'b1;
+				end
+			end
+		endcase
+	end
+end
+
+
+endmodule

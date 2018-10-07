@@ -1,0 +1,316 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 16 16 280 640)
+	(text "TripleBuffer_top" (rect 5 0 69 12)(font "Arial" ))
+	(text "inst" (rect 8 608 20 620)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk_in" (rect 0 0 22 12)(font "Arial" ))
+		(text "clk_in" (rect 21 27 43 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 1))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "button_reset" (rect 0 0 49 12)(font "Arial" ))
+		(text "button_reset" (rect 21 43 70 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 1))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "camera_pclk" (rect 0 0 51 12)(font "Arial" ))
+		(text "camera_pclk" (rect 21 59 72 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "camera_vsync" (rect 0 0 62 12)(font "Arial" ))
+		(text "camera_vsync" (rect 21 75 83 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "camera_href" (rect 0 0 53 12)(font "Arial" ))
+		(text "camera_href" (rect 21 91 74 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "camera_data[7..0]" (rect 0 0 73 12)(font "Arial" ))
+		(text "camera_data[7..0]" (rect 21 107 94 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 264 32)
+		(output)
+		(text "sram_x_addr[19..0]" (rect 0 0 79 12)(font "Arial" ))
+		(text "sram_x_addr[19..0]" (rect 164 27 243 39)(font "Arial" ))
+		(line (pt 264 32)(pt 248 32)(line_width 3))
+	)
+	(port
+		(pt 264 48)
+		(output)
+		(text "sram_x_we_n" (rect 0 0 59 12)(font "Arial" ))
+		(text "sram_x_we_n" (rect 184 43 243 55)(font "Arial" ))
+		(line (pt 264 48)(pt 248 48)(line_width 1))
+	)
+	(port
+		(pt 264 64)
+		(output)
+		(text "sram_x_oe_n" (rect 0 0 57 12)(font "Arial" ))
+		(text "sram_x_oe_n" (rect 186 59 243 71)(font "Arial" ))
+		(line (pt 264 64)(pt 248 64)(line_width 1))
+	)
+	(port
+		(pt 264 80)
+		(output)
+		(text "sram_x_ce_a_n" (rect 0 0 68 12)(font "Arial" ))
+		(text "sram_x_ce_a_n" (rect 175 75 243 87)(font "Arial" ))
+		(line (pt 264 80)(pt 248 80)(line_width 1))
+	)
+	(port
+		(pt 264 96)
+		(output)
+		(text "sram_x_ub_a_n" (rect 0 0 68 12)(font "Arial" ))
+		(text "sram_x_ub_a_n" (rect 175 91 243 103)(font "Arial" ))
+		(line (pt 264 96)(pt 248 96)(line_width 1))
+	)
+	(port
+		(pt 264 112)
+		(output)
+		(text "sram_x_lb_a_n" (rect 0 0 64 12)(font "Arial" ))
+		(text "sram_x_lb_a_n" (rect 179 107 243 119)(font "Arial" ))
+		(line (pt 264 112)(pt 248 112)(line_width 1))
+	)
+	(port
+		(pt 264 128)
+		(output)
+		(text "sram_x_data_io[15..0]" (rect 0 0 89 12)(font "Arial" ))
+		(text "sram_x_data_io[15..0]" (rect 154 123 243 135)(font "Arial" ))
+		(line (pt 264 128)(pt 248 128)(line_width 3))
+	)
+	(port
+		(pt 264 144)
+		(output)
+		(text "sram_y_addr[15..0]" (rect 0 0 80 12)(font "Arial" ))
+		(text "sram_y_addr[15..0]" (rect 163 139 243 151)(font "Arial" ))
+		(line (pt 264 144)(pt 248 144)(line_width 3))
+	)
+	(port
+		(pt 264 160)
+		(output)
+		(text "sram_y_we_n" (rect 0 0 60 12)(font "Arial" ))
+		(text "sram_y_we_n" (rect 183 155 243 167)(font "Arial" ))
+		(line (pt 264 160)(pt 248 160)(line_width 1))
+	)
+	(port
+		(pt 264 176)
+		(output)
+		(text "sram_y_oe_n" (rect 0 0 59 12)(font "Arial" ))
+		(text "sram_y_oe_n" (rect 184 171 243 183)(font "Arial" ))
+		(line (pt 264 176)(pt 248 176)(line_width 1))
+	)
+	(port
+		(pt 264 192)
+		(output)
+		(text "sram_y_ce_a_n" (rect 0 0 69 12)(font "Arial" ))
+		(text "sram_y_ce_a_n" (rect 174 187 243 199)(font "Arial" ))
+		(line (pt 264 192)(pt 248 192)(line_width 1))
+	)
+	(port
+		(pt 264 208)
+		(output)
+		(text "sram_y_ub_a_n" (rect 0 0 69 12)(font "Arial" ))
+		(text "sram_y_ub_a_n" (rect 174 203 243 215)(font "Arial" ))
+		(line (pt 264 208)(pt 248 208)(line_width 1))
+	)
+	(port
+		(pt 264 224)
+		(output)
+		(text "sram_y_lb_a_n" (rect 0 0 66 12)(font "Arial" ))
+		(text "sram_y_lb_a_n" (rect 177 219 243 231)(font "Arial" ))
+		(line (pt 264 224)(pt 248 224)(line_width 1))
+	)
+	(port
+		(pt 264 240)
+		(output)
+		(text "sram_y_data_io[15..0]" (rect 0 0 90 12)(font "Arial" ))
+		(text "sram_y_data_io[15..0]" (rect 153 235 243 247)(font "Arial" ))
+		(line (pt 264 240)(pt 248 240)(line_width 3))
+	)
+	(port
+		(pt 264 256)
+		(output)
+		(text "sram_z_addr[15..0]" (rect 0 0 77 12)(font "Arial" ))
+		(text "sram_z_addr[15..0]" (rect 166 251 243 263)(font "Arial" ))
+		(line (pt 264 256)(pt 248 256)(line_width 3))
+	)
+	(port
+		(pt 264 272)
+		(output)
+		(text "sram_z_we_n" (rect 0 0 57 12)(font "Arial" ))
+		(text "sram_z_we_n" (rect 186 267 243 279)(font "Arial" ))
+		(line (pt 264 272)(pt 248 272)(line_width 1))
+	)
+	(port
+		(pt 264 288)
+		(output)
+		(text "sram_z_oe_n" (rect 0 0 56 12)(font "Arial" ))
+		(text "sram_z_oe_n" (rect 187 283 243 295)(font "Arial" ))
+		(line (pt 264 288)(pt 248 288)(line_width 1))
+	)
+	(port
+		(pt 264 304)
+		(output)
+		(text "sram_z_ce_a_n" (rect 0 0 67 12)(font "Arial" ))
+		(text "sram_z_ce_a_n" (rect 176 299 243 311)(font "Arial" ))
+		(line (pt 264 304)(pt 248 304)(line_width 1))
+	)
+	(port
+		(pt 264 320)
+		(output)
+		(text "sram_z_ub_a_n" (rect 0 0 67 12)(font "Arial" ))
+		(text "sram_z_ub_a_n" (rect 176 315 243 327)(font "Arial" ))
+		(line (pt 264 320)(pt 248 320)(line_width 1))
+	)
+	(port
+		(pt 264 336)
+		(output)
+		(text "sram_z_lb_a_n" (rect 0 0 63 12)(font "Arial" ))
+		(text "sram_z_lb_a_n" (rect 180 331 243 343)(font "Arial" ))
+		(line (pt 264 336)(pt 248 336)(line_width 1))
+	)
+	(port
+		(pt 264 352)
+		(output)
+		(text "sram_z_data_io[15..0]" (rect 0 0 88 12)(font "Arial" ))
+		(text "sram_z_data_io[15..0]" (rect 155 347 243 359)(font "Arial" ))
+		(line (pt 264 352)(pt 248 352)(line_width 3))
+	)
+	(port
+		(pt 264 368)
+		(output)
+		(text "led_config_finished" (rect 0 0 75 12)(font "Arial" ))
+		(text "led_config_finished" (rect 168 363 243 375)(font "Arial" ))
+		(line (pt 264 368)(pt 248 368)(line_width 1))
+	)
+	(port
+		(pt 264 384)
+		(output)
+		(text "camera_sioc" (rect 0 0 51 12)(font "Arial" ))
+		(text "camera_sioc" (rect 192 379 243 391)(font "Arial" ))
+		(line (pt 264 384)(pt 248 384)(line_width 1))
+	)
+	(port
+		(pt 264 400)
+		(output)
+		(text "camera_siod" (rect 0 0 51 12)(font "Arial" ))
+		(text "camera_siod" (rect 192 395 243 407)(font "Arial" ))
+		(line (pt 264 400)(pt 248 400)(line_width 1))
+	)
+	(port
+		(pt 264 416)
+		(output)
+		(text "camera_reset" (rect 0 0 56 12)(font "Arial" ))
+		(text "camera_reset" (rect 187 411 243 423)(font "Arial" ))
+		(line (pt 264 416)(pt 248 416)(line_width 1))
+	)
+	(port
+		(pt 264 432)
+		(output)
+		(text "camera_pwdn" (rect 0 0 56 12)(font "Arial" ))
+		(text "camera_pwdn" (rect 187 427 243 439)(font "Arial" ))
+		(line (pt 264 432)(pt 248 432)(line_width 1))
+	)
+	(port
+		(pt 264 448)
+		(output)
+		(text "camera_xclk" (rect 0 0 51 12)(font "Arial" ))
+		(text "camera_xclk" (rect 192 443 243 455)(font "Arial" ))
+		(line (pt 264 448)(pt 248 448)(line_width 1))
+	)
+	(port
+		(pt 264 464)
+		(output)
+		(text "VGA_B[7..0]" (rect 0 0 55 12)(font "Arial" ))
+		(text "VGA_B[7..0]" (rect 188 459 243 471)(font "Arial" ))
+		(line (pt 264 464)(pt 248 464)(line_width 3))
+	)
+	(port
+		(pt 264 480)
+		(output)
+		(text "VGA_G[7..0]" (rect 0 0 56 12)(font "Arial" ))
+		(text "VGA_G[7..0]" (rect 187 475 243 487)(font "Arial" ))
+		(line (pt 264 480)(pt 248 480)(line_width 3))
+	)
+	(port
+		(pt 264 496)
+		(output)
+		(text "VGA_R[7..0]" (rect 0 0 57 12)(font "Arial" ))
+		(text "VGA_R[7..0]" (rect 186 491 243 503)(font "Arial" ))
+		(line (pt 264 496)(pt 248 496)(line_width 3))
+	)
+	(port
+		(pt 264 512)
+		(output)
+		(text "VGA_clkout" (rect 0 0 51 12)(font "Arial" ))
+		(text "VGA_clkout" (rect 192 507 243 519)(font "Arial" ))
+		(line (pt 264 512)(pt 248 512)(line_width 1))
+	)
+	(port
+		(pt 264 528)
+		(output)
+		(text "VGA_Hsync" (rect 0 0 56 12)(font "Arial" ))
+		(text "VGA_Hsync" (rect 187 523 243 535)(font "Arial" ))
+		(line (pt 264 528)(pt 248 528)(line_width 1))
+	)
+	(port
+		(pt 264 544)
+		(output)
+		(text "VGA_Vsync" (rect 0 0 57 12)(font "Arial" ))
+		(text "VGA_Vsync" (rect 186 539 243 551)(font "Arial" ))
+		(line (pt 264 544)(pt 248 544)(line_width 1))
+	)
+	(port
+		(pt 264 560)
+		(output)
+		(text "VGA_Nblank" (rect 0 0 56 12)(font "Arial" ))
+		(text "VGA_Nblank" (rect 187 555 243 567)(font "Arial" ))
+		(line (pt 264 560)(pt 248 560)(line_width 1))
+	)
+	(port
+		(pt 264 576)
+		(output)
+		(text "VGA_Nsync" (rect 0 0 56 12)(font "Arial" ))
+		(text "VGA_Nsync" (rect 187 571 243 583)(font "Arial" ))
+		(line (pt 264 576)(pt 248 576)(line_width 1))
+	)
+	(drawing
+		(rectangle (rect 16 16 248 608)(line_width 1))
+	)
+)
