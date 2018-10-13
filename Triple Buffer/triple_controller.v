@@ -29,6 +29,7 @@ output reg [2:0] sram_select,//Buffer selection line
 output reg error //Used to detect when an invalid buffer selection state has occured
 );
 
+//Internal selection signal buffered for stability
 wire [2:0] sram_int_select;
 
 localparam [1:0] state_first_wait = 2'b00,//Wait for VSYNC to begin
@@ -281,7 +282,7 @@ end
 endtask
 
 
-
+//Pushing the selection state out to the MUXes
 always @ (posedge clk) begin
 
 //If we're in an active state

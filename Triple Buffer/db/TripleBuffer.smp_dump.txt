@@ -1,41 +1,41 @@
 
-State Machine - |TripleBuffer_top|tri_control:inst9|vga_buff
+State Machine - |TripleBuffer|tri_control:tc|vga_buff
 Name vga_buff.X vga_buff.Z vga_buff.Y 
 vga_buff.X 0 0 0 
 vga_buff.Y 1 0 1 
 vga_buff.Z 1 1 0 
 
-State Machine - |TripleBuffer_top|tri_control:inst9|trans_state
+State Machine - |TripleBuffer|tri_control:tc|trans_state
 Name trans_state.state_first_wait trans_state.state_second_wait trans_state.state_switch 
 trans_state.state_first_wait 0 0 0 
 trans_state.state_switch 1 0 1 
 trans_state.state_second_wait 1 1 0 
 
-State Machine - |TripleBuffer_top|tri_control:inst9|camera_buff
+State Machine - |TripleBuffer|tri_control:tc|camera_buff
 Name camera_buff.X camera_buff.Z camera_buff.Y 
 camera_buff.X 0 0 0 
 camera_buff.Y 1 0 1 
 camera_buff.Z 1 1 0 
 
-State Machine - |TripleBuffer_top|tri_control:inst9|cap_state
+State Machine - |TripleBuffer|tri_control:tc|cap_state
 Name cap_state.state_first_wait cap_state.state_second_wait cap_state.state_switch 
 cap_state.state_first_wait 0 0 0 
 cap_state.state_switch 1 0 1 
 cap_state.state_second_wait 1 1 0 
 
-State Machine - |TripleBuffer_top|sram_ctrl:inst3|state_reg
+State Machine - |TripleBuffer|sram_ctrl:sc_z|state_reg
 Name state_reg.state_idle state_reg.state_write state_reg.state_read 
 state_reg.state_idle 0 0 0 
 state_reg.state_read 1 0 1 
 state_reg.state_write 1 1 0 
 
-State Machine - |TripleBuffer_top|sram_ctrl:inst1|state_reg
+State Machine - |TripleBuffer|sram_ctrl:sc_y|state_reg
 Name state_reg.state_idle state_reg.state_write state_reg.state_read 
 state_reg.state_idle 0 0 0 
 state_reg.state_read 1 0 1 
 state_reg.state_write 1 1 0 
 
-State Machine - |TripleBuffer_top|sram_ctrl:inst2|state_reg
+State Machine - |TripleBuffer|sram_ctrl:sc_x|state_reg
 Name state_reg.state_idle state_reg.state_write state_reg.state_read 
 state_reg.state_idle 0 0 0 
 state_reg.state_read 1 0 1 

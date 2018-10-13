@@ -1,4 +1,3 @@
-
 //This is the main test bench for the top level diagram
 //Copyright (C) <2018>  <James Williams>
 

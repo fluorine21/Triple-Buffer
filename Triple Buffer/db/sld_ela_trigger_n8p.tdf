@@ -1,8 +1,8 @@
 --sld_ela_trigger DATA_BITS=2 INVERSION_MASK=00000000 INVERSION_MASK_LENGTH=1 LEVEL_NAMES="sld_reserved_TripleBuffer_top_level_v_file_1_c41a," POWER_UP_TRIGGER=0 TRIGGER_LEVEL=1 acq_clk data_in reset_all setup_bit_in setup_bit_out setup_ena tck trigger_level_match_out
---VERSION_BEGIN 17.1 cbx_mgl 2017:10:25:18:08:29:SJ cbx_sld_ela_trigger 2017:10:25:18:06:53:SJ  VERSION_END
+--VERSION_BEGIN 18.1 cbx_mgl 2018:09:12:13:10:36:SJ cbx_sld_ela_trigger 2018:09:12:13:04:24:SJ  VERSION_END
 
 
--- Copyright (C) 2017  Intel Corporation. All rights reserved.
+-- Copyright (C) 2018  Intel Corporation. All rights reserved.
 --  Your use of Intel Corporation's design tools, logic functions 
 --  and other software and tools, and its AMPP partner logic 
 --  functions, and any output files from any of the foregoing 
