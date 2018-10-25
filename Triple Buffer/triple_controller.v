@@ -144,7 +144,7 @@ always @ (posedge clk) begin
 					trans_state <= state_switch;
 				end
 				else begin
-					trans_count <= cap_count + 1'b1;
+					trans_count <= trans_count + 1'b1;
 				end
 			end
 			//If not active, reset the counter
@@ -485,11 +485,11 @@ always @ (posedge clk) begin
 
 end
 
-assign sram_int_select = (camera_buff == X && vga_buff == Y)? A : 
-							((camera_buff == X && vga_buff == Z) ? B :
-							((camera_buff == Y && vga_buff == X) ? C :
-							((camera_buff == Y && vga_buff == Z) ? D :
-							((camera_buff == Z && vga_buff == X) ? E : F))));
+assign sram_int_select = (camera_buff == X && vga_buff == Y) ? A : 
+						((camera_buff == X && vga_buff == Z) ? B :
+						((camera_buff == Y && vga_buff == X) ? C :
+						((camera_buff == Y && vga_buff == Z) ? D :
+						((camera_buff == Z && vga_buff == X) ? E : F))));
 
 
 endmodule
