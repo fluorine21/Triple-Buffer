@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Fri Oct 12 19:03:57 2018
-Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Analysis & Synthesis Status : Successful - Sat Mar 16 15:31:55 2019
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : TripleBuffer_top
 Top-level Entity Name : TripleBuffer
 Family : Cyclone IV E
-Total logic elements : 1,437
-    Total combinational functions : 1,114
-    Dedicated logic registers : 994
-Total registers : 994
+Total logic elements : 463
+    Total combinational functions : 400
+    Dedicated logic registers : 346
+Total registers : 346
 Total pins : 164
 Total virtual pins : 0
-Total memory bits : 921,600
+Total memory bits : 4,096
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0

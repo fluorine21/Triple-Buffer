@@ -37,9 +37,9 @@ initial begin
 
 	data_out <= 16'b0;
 
-	for (i = 0; i < 65535; i = i +1) begin   	  	
-		mem[i] <= 8'b0;
-  	end
+	//for (i = 0; i < 65535; i = i +1) begin   	  	
+		//mem[i] <= 8'b0;
+  	//end
 
 end
 

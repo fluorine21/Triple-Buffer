@@ -1,6 +1,6 @@
 Flow report for TripleBuffer_top
-Fri Oct 12 19:04:52 2018
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Sat Mar 16 15:32:21 2019
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
 ---------------------
@@ -21,7 +21,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2018  Intel Corporation. All rights reserved.
+Copyright (C) 2017  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -40,20 +40,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Oct 12 19:04:42 2018       ;
-; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Flow Status                        ; Successful - Sat Mar 16 15:32:16 2019       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; TripleBuffer_top                            ;
 ; Top-level Entity Name              ; TripleBuffer                                ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE115F29C7                               ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,458 / 114,480 ( 1 % )                     ;
-;     Total combinational functions  ; 1,117 / 114,480 ( < 1 % )                   ;
-;     Dedicated logic registers      ; 994 / 114,480 ( < 1 % )                     ;
-; Total registers                    ; 994                                         ;
+; Total logic elements               ; 510 / 114,480 ( < 1 % )                     ;
+;     Total combinational functions  ; 401 / 114,480 ( < 1 % )                     ;
+;     Dedicated logic registers      ; 346 / 114,480 ( < 1 % )                     ;
+; Total registers                    ; 346                                         ;
 ; Total pins                         ; 164 / 529 ( 31 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 921,600 / 3,981,312 ( 23 % )                ;
+; Total memory bits                  ; 4,096 / 3,981,312 ( < 1 % )                 ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                             ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
@@ -64,90 +64,63 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/12/2018 19:02:54 ;
+; Start date & time ; 03/16/2019 15:31:41 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; TripleBuffer_top    ;
 +-------------------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                                          ;
-+-------------------------------------+--------------------------------------------------------------------------------+------------------+--------------+------------------+
-; Assignment Name                     ; Value                                                                          ; Default Value    ; Entity Name  ; Section Id       ;
-+-------------------------------------+--------------------------------------------------------------------------------+------------------+--------------+------------------+
-; COMPILER_SIGNATURE_ID               ; 963354559056.153938897409612                                                   ; --               ; --           ; --               ;
-; ENABLE_SIGNALTAP                    ; On                                                                             ; --               ; --           ; --               ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                                                             ; --               ; --           ; --               ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                                                              ; --               ; --           ; --               ;
-; MISC_FILE                           ; pll150.bsf                                                                     ; --               ; --           ; --               ;
-; MISC_FILE                           ; pll150_bb.v                                                                    ; --               ; --           ; --               ;
-; MISC_FILE                           ; pll150.ppf                                                                     ; --               ; --           ; --               ;
-; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                                                              ; --               ; --           ; --               ;
-; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                                                              ; --               ; --           ; --               ;
-; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                                                                     ; --               ; --           ; --               ;
-; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                                                                     ; --               ; --           ; --               ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family)                                         ; --               ; TripleBuffer ; Top              ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                                         ; --               ; TripleBuffer ; Top              ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                                         ; --               ; TripleBuffer ; Top              ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                            ; --               ; --           ; --               ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                          ; --               ; --           ; --               ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                                   ; --               ; --           ; --               ;
-; SLD_FILE                            ; db/SigTap_auto_stripped.stp                                                    ; --               ; --           ; --               ;
-; SLD_NODE_CREATOR_ID                 ; 110                                                                            ; --               ; --           ; top_level_v_file ;
-; SLD_NODE_ENTITY_NAME                ; sld_signaltap                                                                  ; --               ; --           ; top_level_v_file ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_RAM_BLOCK_TYPE=AUTO                                                        ; --               ; --           ; top_level_v_file ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_DATA_BITS=7                                                                ; --               ; --           ; top_level_v_file ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_BITS=2                                                             ; --               ; --           ; top_level_v_file ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STORAGE_QUALIFIER_BITS=7                                                   ; --               ; --           ; top_level_v_file ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_INFO=805334528                                                        ; --               ; --           ; top_level_v_file ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_POWER_UP_TRIGGER=0                                                         ; --               ; --           ; top_level_v_file ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INVERSION_MASK=0000000000000000000000000000000                             ; --               ; --           ; top_level_v_file ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INVERSION_MASK_LENGTH=31                                                   ; --               ; --           ; top_level_v_file ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0                                  ; --               ; --           ; top_level_v_file ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_SEGMENT_SIZE=131072                                                        ; --               ; --           ; top_level_v_file ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ATTRIBUTE_MEM_MODE=OFF                                                     ; --               ; --           ; top_level_v_file ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STATE_FLOW_USE_GENERATED=0                                                 ; --               ; --           ; top_level_v_file ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STATE_BITS=11                                                              ; --               ; --           ; top_level_v_file ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_BUFFER_FULL_STOP=1                                                         ; --               ; --           ; top_level_v_file ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_CURRENT_RESOURCE_WIDTH=1                                                   ; --               ; --           ; top_level_v_file ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INCREMENTAL_ROUTING=1                                                      ; --               ; --           ; top_level_v_file ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_LEVEL=1                                                            ; --               ; --           ; top_level_v_file ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_SAMPLE_DEPTH=131072                                                        ; --               ; --           ; top_level_v_file ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_IN_ENABLED=0                                                       ; --               ; --           ; top_level_v_file ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_PIPELINE=0                                                         ; --               ; --           ; top_level_v_file ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_RAM_PIPELINE=0                                                             ; --               ; --           ; top_level_v_file ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_COUNTER_PIPELINE=0                                                         ; --               ; --           ; top_level_v_file ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ADVANCED_TRIGGER_ENTITY=sld_reserved_TripleBuffer_top_level_v_file_1_c41a, ; --               ; --           ; top_level_v_file ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_LEVEL_PIPELINE=1                                                   ; --               ; --           ; top_level_v_file ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ENABLE_ADVANCED_TRIGGER=1                                                  ; --               ; --           ; top_level_v_file ;
-; TOP_LEVEL_ENTITY                    ; TripleBuffer                                                                   ; TripleBuffer_top ; --           ; --               ;
-; USE_SIGNALTAP_FILE                  ; SigTap.stp                                                                     ; --               ; --           ; --               ;
-+-------------------------------------+--------------------------------------------------------------------------------+------------------+--------------+------------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                            ;
++-------------------------------------+----------------------------------------+------------------+--------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value    ; Entity Name  ; Section Id ;
++-------------------------------------+----------------------------------------+------------------+--------------+------------+
+; COMPILER_SIGNATURE_ID               ; 53447161863262.155276830009556         ; --               ; --           ; --         ;
+; ENABLE_SIGNALTAP                    ; On                                     ; --               ; --           ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --               ; --           ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --               ; --           ; --         ;
+; MISC_FILE                           ; pll150.bsf                             ; --               ; --           ; --         ;
+; MISC_FILE                           ; pll150_bb.v                            ; --               ; --           ; --         ;
+; MISC_FILE                           ; pll150.ppf                             ; --               ; --           ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --               ; --           ; --         ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --               ; --           ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --               ; --           ; --         ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --               ; --           ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --               ; TripleBuffer ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --               ; TripleBuffer ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --               ; TripleBuffer ; Top        ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --               ; --           ; --         ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --               ; --           ; --         ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --               ; --           ; --         ;
+; SLD_FILE                            ; db/SigTap_auto_stripped.stp            ; --               ; --           ; --         ;
+; TOP_LEVEL_ENTITY                    ; TripleBuffer                           ; TripleBuffer_top ; --           ; --         ;
+; USE_SIGNALTAP_FILE                  ; SigTap.stp                             ; --               ; --           ; --         ;
++-------------------------------------+----------------------------------------+------------------+--------------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:00     ; 1.0                     ; 4880 MB             ; 00:01:33                           ;
-; Fitter               ; 00:00:33     ; 1.0                     ; 5480 MB             ; 00:00:39                           ;
-; Assembler            ; 00:00:07     ; 1.0                     ; 4719 MB             ; 00:00:07                           ;
-; Timing Analyzer      ; 00:00:08     ; 1.1                     ; 4869 MB             ; 00:00:07                           ;
-; Total                ; 00:01:48     ; --                      ; --                  ; 00:02:26                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:15     ; 1.0                     ; 4833 MB             ; 00:00:32                           ;
+; Fitter                    ; 00:00:15     ; 1.0                     ; 5767 MB             ; 00:00:23                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 4707 MB             ; 00:00:04                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.1                     ; 4873 MB             ; 00:00:04                           ;
+; Total                     ; 00:00:37     ; --                      ; --                  ; 00:01:03                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-I4VC6GO  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-I4VC6GO  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DESKTOP-I4VC6GO  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DESKTOP-I4VC6GO  ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++-----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                         ;
++---------------------------+------------------+------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++---------------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis      ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; MSI              ; Windows 10 ; 10.0       ; x86_64         ;
++---------------------------+------------------+------------+------------+----------------+
 
 
 ------------

@@ -4,7 +4,7 @@ editor if you plan to continue editing the block that represents it in
 the Block Editor! File corruption is VERY likely to occur.
 */
 /*
-Copyright (C) 2017  Intel Corporation. All rights reserved.
+Copyright (C) 2018  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -65,7 +65,23 @@ refer to the applicable agreement for further details.
 		(text "error" (rect 207 43 227 55)(font "Arial" ))
 		(line (pt 248 48)(pt 232 48)(line_width 1))
 	)
+	(parameter
+		"wait_cycles"
+		"0"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"TRANS_ACTIVE"
+		"0"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(parameter
+		"CAP_ACTIVE"
+		"1"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
 		(rectangle (rect 16 16 232 96)(line_width 1))
 	)
+	(annotation_block (parameter)(rect 264 -64 364 16))
 )

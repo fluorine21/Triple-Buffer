@@ -316,8 +316,8 @@ tri_ready_mux trm
 	.select(mux_select),
 	
 	//Outputs
-	.ready_c(ready_c),
-	.ready_t(ready_t)
+	.ready_a(ready_c),
+	.ready_b(ready_t)
 );
 
 tri_control tc

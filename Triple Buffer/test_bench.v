@@ -153,8 +153,9 @@ initial begin
 	camera_href_in = 1'b0;
 	camera_data_in = 8'b0;
 	
-	
-	test();
+	while(1) begin
+		test();
+	end
 
 end
 
